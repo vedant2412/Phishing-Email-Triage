@@ -46,3 +46,33 @@ It demonstrates:
 - Practical SOC-style email triage workflows
 - Defensive security thinking rather than theoretical detection
 - Automation that assists analysts instead of replacing judgment
+
+
+## Installation
+
+This project is designed to run easily in GitHub Codespaces or any Python 3 environment.
+
+>git clone https://github.com/vedant2412/phish-triage-cli.git
+>
+>cd phish-triage-cli
+>
+>pip install -r requirements.txt
+
+
+## Detection Logic (High Level)
+
+The scoring system uses rule-based heuristics commonly applied in enterprise phishing triage:
+
+- Header inconsistencies
+- Domain reputation signals (structure-based, not external lookups)
+- URL obfuscation techniques
+- Linguistic indicators of social engineering
+- Attachment naming patterns
+
+Each indicator contributes to a cumulative risk score, producing a final classification.
+
+
+## Disclaimer
+
+This project is for educational and practice purposes only.
+It does not send network traffic, interact with live systems, or perform exploitation.
