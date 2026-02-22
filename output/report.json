@@ -1,0 +1,22 @@
+{
+  "generated_at_utc": "2026-02-22T00:23:21.884199+00:00",
+  "classification": "Safe",
+  "risk_score": 0,
+  "reasons": [],
+  "headers": {},
+  "from_addr": "",
+  "reply_to": "",
+  "return_path": "",
+  "subject": "",
+  "iocs": {
+    "urls": [
+      "https://github.com/vedant2412/phish-triage-cli.git"
+    ],
+    "domains": [
+      "github.com"
+    ],
+    "ips": [],
+    "hashes": []
+  },
+  "body_preview": "# Phishing-Email-Triage\n\n## Overview\n\nPhishing emails remain one of the most common initial access vectors in real-world security incidents.\nThis project is a command-line phishing email triage tool that analyzes raw email content and headers to determine whether an email is legitimate or potentially malicious, while clearly explaining why.\nThe tool mimics how a SOC analyst performs first-level phishing triage by identifying common phishing indicators, assigning a risk score, and extracting rele..."
+}
