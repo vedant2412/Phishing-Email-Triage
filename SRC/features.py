@@ -135,4 +135,25 @@ def detect_features(email: ParsedEmail, iocs: IOCs) -> List[FeatureResult]:
             )
         )
 
+# -----------------------------
+# 8. Display name vs email mismatch
+# -----------------------------
+    import re
+
+    match = re.search(r"(.+)<(.+@.+)>", email.from_addr)
+    if match:
+        display_name = match.group(1).strip().lower()
+        email_addr = match.group(2).strip().lower()
+
+    # Extract domain and basic name tokens
+        domain = email_addr.split("@")[-1]
+
+    if display_name and domain not in display_name:
+        findings.append(
+            FeatureResult(
+                name="display_name_mismatch",
+                description="Display name does not match sender email domain.",
+                severity=4,
+            )
+        )
     return findings
